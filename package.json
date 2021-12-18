@@ -1,0 +1,25 @@
+{
+  "name": "@baeky/nestjs-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/**/*",
+      "libs/**/*"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.0",
+    "@types/ramda": "^0.27.60",
+    "del-cli": "^4.0.1",
+    "jest": "^27.4.5",
+    "jest-junit": "^13.0.0",
+    "ts-jest": "^27.1.2",
+    "ts-node-dev": "^1.1.8",
+    "ts-standard": "^11.0.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.4"
+  }
+}

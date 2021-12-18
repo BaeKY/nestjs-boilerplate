@@ -1,0 +1,21 @@
+{
+  "name": "@baeky-nestjs/main",
+  "version": "1.0.0",
+  "main": "./src",
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^8.2.4",
+    "@nestjs/config": "^1.1.5",
+    "@nestjs/core": "^8.2.4",
+    "@nestjs/platform-fastify": "^8.2.4",
+    "@nestjs/terminus": "^8.0.3",
+    "ramda": "^0.27.1",
+    "rxjs": "^7.4.0"
+  },
+  "ts-standrad": {
+    "project": "./tsconfig.json",
+    "ignore": [
+      "./src/**/*.js"
+    ]
+  }
+}
