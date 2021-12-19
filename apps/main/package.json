@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "./src",
   "license": "MIT",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only ./src/index.ts"
+  },
   "dependencies": {
     "@nestjs/common": "^8.2.4",
     "@nestjs/config": "^1.1.5",
@@ -10,6 +13,7 @@
     "@nestjs/platform-fastify": "^8.2.4",
     "@nestjs/terminus": "^8.0.3",
     "ramda": "^0.27.1",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "^7.4.0"
   },
   "ts-standrad": {

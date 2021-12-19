@@ -1,13 +1,14 @@
+import 'reflect-metadata'
 import { NestFactory } from '@nestjs/core'
-import { FastifyAdapter } from '@nestjs/platform-fastify'
-import { App } from 'app.module'
+import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify'
+import { App } from './app.module'
 
 export const bootstrap = async (): Promise<void> => {
   // empty
-  const app = await NestFactory.create(App, new FastifyAdapter())
+  const app = await NestFactory.create<NestFastifyApplication>(App, new FastifyAdapter())
 
   const port = 5050
-  app.listen(`0.0.0.0:${port}`)
+  app.listen(port, '0.0.0.0')
     .then(() => console.log(`Server listening at ${port}`))
     .catch((err) => console.error(err))
 }
