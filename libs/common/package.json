@@ -1,0 +1,19 @@
+{
+  "name": "@baeky-nestjs-lib/common",
+  "version": "0.0.1",
+  "main": "./src",
+  "license": "MIT",
+  "author": {
+    "name": "baeky",
+    "email": "baeky.dev@gmail.com"
+  },
+  "scripts": {
+    "build": "tsc --bulid --force"
+  },
+  "dependencies": {
+    "@nestjs/common": "^8.2.4",
+    "@nestjs/config": "^1.1.5",
+    "@nestjs/core": "^8.2.4",
+    "reflect-metadata": "^0.1.13"
+  }
+}

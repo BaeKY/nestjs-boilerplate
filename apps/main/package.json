@@ -1,17 +1,21 @@
 {
-  "name": "@baeky-nestjs/main",
+  "name": "@baeky-nestjs/api-gateway",
   "version": "1.0.0",
   "main": "./src",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only ./src/index.ts"
+    "dev": "export NODE_ENV=dev && ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "packaging": "pkg . --target node16-alpine-arm64 --output dist/server",
+    "test": "jest --watch --passWithNoTests"
   },
   "dependencies": {
+    "@baeky-nestjs-lib/common": "*",
     "@nestjs/common": "^8.2.4",
     "@nestjs/config": "^1.1.5",
     "@nestjs/core": "^8.2.4",
     "@nestjs/platform-fastify": "^8.2.4",
     "@nestjs/terminus": "^8.0.3",
+    "joi": "^17.5.0",
     "ramda": "^0.27.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.4.0"
