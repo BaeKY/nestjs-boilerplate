@@ -1,5 +1,5 @@
 {
-  "name": "Typescript Env",
+  "name": "Typescript-Env",
   "build": {
     "dockerfile": "Dockerfile",
     "args": { "VARIANT": "16-bullseye" }
@@ -7,6 +7,9 @@
   "appPort": [5050],
   "remoteUser": "node",
   "postCreateCommand": "yarn && yarn upgrade",
+  "runArgs": ["--init", "--privileged"],
+  "mounts": ["source=dind-var-lib-docker,target=/var/lib/docker,type=volume"],
+  "overrideCommand": false,
   "extensions": [
     "aaron-bond.better-comments",
     "codeandstuff.package-json-upgrade",
@@ -14,6 +17,7 @@
     "eamodio.gitlens",
     "graphql.vscode-graphql",
     "gruntfuggly.todo-tree",
+    "ms-azuretools.vscode-docker",
     "ms-vscode.vscode-typescript-next",
     "mhutchie.git-graph",
     "pkief.material-icon-theme",
