@@ -6,9 +6,12 @@
   },
   "appPort": [5050],
   "remoteUser": "node",
-  "postCreateCommand": "yarn && yarn upgrade",
+  "postCreateCommand": "sudo chown node node_modules && yarn && yarn upgrade",
   "runArgs": ["--init", "--privileged"],
-  "mounts": ["source=dind-var-lib-docker,target=/var/lib/docker,type=volume"],
+  "mounts": [
+    "source=nestjs-boilerplate-docker,target=/var/lib/docker,type=volume",
+    "source=nestjs-boilerplate-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ],
   "overrideCommand": false,
   "extensions": [
     "aaron-bond.better-comments",
